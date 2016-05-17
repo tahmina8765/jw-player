@@ -23,12 +23,16 @@ and open the template in the editor.
                 playerInstance.setup({
                     file: "https://www.youtube.com/watch?v=gM7Ua3vPImA",
                     width: 640,
-                    height: 360,
-                    ga: {
-                        idstring: "Test Youtube Player",
-                        label: "BOA-001"
-                    }
+                    height: 360
                 });
+
+                playerInstance.on('error', function (event) {
+                    ga('send', 'event', 'Videos', 'Errors', 'event.message');
+                });
+                playerInstance.on('play', function (event) {
+                    ga('send', 'event', 'Videos', 'Playes', 'event.message');
+                });
+                
             </script>
         </div>
 
@@ -47,6 +51,12 @@ and open the template in the editor.
 
             ga('create', 'UA-71164906-2', 'auto');
             ga('send', 'pageview');
+//            ga('send', {
+//                hitType: 'event',
+//                eventCategory: 'Videos',
+//                eventAction: 'play',
+//                eventLabel: 'Fall Campaign'
+//            });
 
         </script>
     </body>

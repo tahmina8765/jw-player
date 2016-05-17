@@ -1,0 +1,26 @@
+Content    Any video or audio content object with a unique Media ID
+Embeds    Players that have loaded on a webpage
+Plays    Video starts across all embedded players
+Completes    Videos watched to completion
+Daily Unique Viewers    Unique users who have played at least one video
+Plays per Unique    The number of plays divided by the number of unique viewers on specific day
+Complete Rate    The number of plays divided by the number of completes, as a percentage
+Time Watched    Total time watched across all your players
+Engagement    Use this data to track the performance of your video (where do viewers drop off? which sections do they replay?)
+
+https://www.viget.com/articles/getting-more-out-of-google-analytics-advanced-custom-filters
+https://support.jwplayer.com/customer/portal/articles/1417179-integration-with-google-analytics#fndtn-dashboard
+JW Player Video Events
+Video Plays
+Video Completes
+Buffer events
+Idle events
+Pause events
+Resume events
+Seek events
+
+
+StreamSenseEventType.BUFFER 	on('buffer');
+StreamSenseEventType.PAUSE 	on('pause');
+StreamSenseEventType.PLAY 	on('play');
+StreamSenseEventType.END 	on('complete');
